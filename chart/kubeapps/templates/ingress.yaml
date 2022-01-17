@@ -10,7 +10,6 @@ metadata:
     {{- end }}
   annotations:
     {{- if .Values.ingress.certManager }}
-    {{- if .Values.ingress.certManager.clusterIssuer }}
     cert-manager.io/cluster-issuer: {{ .Values.ingress.certManager.clusterIssuer }}
     {{- end }}
     {{- if .Values.ingress.certManager.httpIngressClass }}
